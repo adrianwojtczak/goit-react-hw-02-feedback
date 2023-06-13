@@ -1,6 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import styles from './Statistics.module.css';
+
 export const Statistics = ({
   good,
   neutral,
@@ -8,12 +10,14 @@ export const Statistics = ({
   total,
   positivePercentage,
 }) => (
-  <div>
-    <p>Good: {good}</p>
-    <p>Neutral: {neutral}</p>
-    <p>Bad: {bad}</p>
-    <p>Total: {total}</p>
-    <p>Positive Feedback: {positivePercentage}%</p>
+  <div className={styles.statistics}>
+    <p className={styles.statisticItem}>Good: {good}</p>
+    <p className={styles.statisticItem}>Neutral: {neutral}</p>
+    <p className={styles.statisticItem}>Bad: {bad}</p>
+    <p className={styles.statisticItem}>Total: {total}</p>
+    <p className={styles.statisticItem}>
+      Positive Feedback: {positivePercentage}%
+    </p>
   </div>
 );
 
